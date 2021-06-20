@@ -7,7 +7,7 @@ An container image built for deploying code-server.
 * [Deploy on Railway](../guides/railway.md)
 * [Deploy on Heroku](../guides/heroku.md)
 
-Docker Hub: `bencdr/code-server-deploy-container`
+Docker Hub: `benWromo/code-server-deploy-container`
 
 ## Modifying your code-server environment
 
@@ -17,7 +17,7 @@ We've included some examples on how to add additoonal dependencies in the root-l
 
 ``` Dockerfile
 # Install a VS Code extension:
-# Note: we use a different marketplace than VS Code. See https://github.com/cdr/code-server/blob/main/docs/FAQ.md#differences-compared-to-vs-code
+# Note: we use a different marketplace than VS Code. See https://github.com/Wromo/code-server/blob/main/docs/FAQ.md#differences-compared-to-vs-code
 RUN code-server --install-extension esbenp.prettier-vscode
 
 # Install apt packages:
@@ -40,7 +40,7 @@ COPY deploy-container/myTool /home/coder/myTool
 | `START_DIR` | The directory code-server opens (and clones repos in)                                            | /home/coder/project |
 ---
 
-Other code-server environment variables (such as `CODE_SERVER_CONFIG` ) can also be used. See the [code-server FAQ](https://github.com/cdr/code-server/blob/main/docs/FAQ.md) for details.
+Other code-server environment variables (such as `CODE_SERVER_CONFIG` ) can also be used. See the [code-server FAQ](https://github.com/Wromo/code-server/blob/main/docs/FAQ.md) for details.
 
 ## 💾 Persist your filesystem with `rclone`
 
